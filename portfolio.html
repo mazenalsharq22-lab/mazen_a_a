@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أعمالي - المهندس مازن عبد المعز</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark: #0f0e17;
+            --dark-light: #1a1a2e;
+            --white: #fffffe;
+            --gold: #ff8906;
+            --pink: #e53170;
+            --shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+            --radius: 20px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f5f5f5;
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ======================
+           شريط التنقل
+        ====================== */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 18px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        #navbar.scrolled {
+            background: rgba(15, 14, 23, 0.92);
+            backdrop-filter: blur(18px);
+            padding: 12px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .nav-links li a {
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 50px;
+            transition: var(--transition);
+            font-size: 0.98rem;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--white);
+            background: rgba(255, 137, 6, 0.2);
+        }
+
+        .nav-links li a.active {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* ======================
+           قسم المشاريع
+        ====================== */
+        .page-section {
+            padding: 130px 0 80px;
+            background: #f5f5f5;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(255, 137, 6, 0.08);
+            color: var(--gold);
+            padding: 4px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 137, 6, 0.15);
+        }
+
+        .section-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .section-header h1 .highlight {
+            color: var(--gold);
+        }
+
+        .section-header p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 35px;
+        }
+
+        .portfolio-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+            background: linear-gradient(135deg, #1a1a2e, #0f0e17);
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 14, 23, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay .btn-details {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .portfolio-overlay .btn-details:hover {
+            transform: scale(1.08);
+            background: #e67a00;
+        }
+
+        .portfolio-info {
+            padding: 25px 28px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .portfolio-info h3 .emoji {
+            font-size: 1.6rem;
+        }
+
+        .portfolio-info .project-description {
+            color: #555;
+            font-size: 0.98rem;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0 15px;
+        }
+
+        .tech-tags span {
+            background: rgba(15, 14, 23, 0.06);
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* ======================================================
+           نافذة التفاصيل المنبثقة (Modal)
+        ====================================================== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: var(--radius);
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px 45px;
+            position: relative;
+            animation: modalIn 0.4s ease;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes modalIn {
+            0% {
+                transform: scale(0.8) translateY(40px);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: sticky;
+            top: 0;
+            float: left;
+            background: var(--pink);
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+            background: #c71f5a;
+        }
+
+        .modal-content .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 137, 6, 0.15);
+        }
+
+        .modal-content .modal-header .modal-icon {
+            font-size: 3rem;
+            color: var(--gold);
+        }
+
+        .modal-content .modal-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .modal-content .modal-header h2 span {
+            color: var(--gold);
+        }
+
+        .modal-content .modal-body h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-content .modal-body h4 i {
+            color: var(--gold);
+        }
+
+        .modal-content .modal-body p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .modal-content .modal-body ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+            margin: 10px 0;
+        }
+
+        .modal-content .modal-body ul li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-content .modal-body ul li i {
+            color: var(--gold);
+            font-size: 0.85rem;
+            width: 20px;
+        }
+
+        .modal-content .modal-body .tech-tags-modal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0 15px;
+        }
+
+        .modal-content .modal-body .tech-tags-modal span {
+            background: rgba(15, 14, 23, 0.06);
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .modal-content .modal-body .highlight-box {
+            background: rgba(255, 137, 6, 0.06);
+            border-right: 4px solid var(--gold);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .modal-content .modal-body .highlight-box p {
+            margin: 0;
+            color: #333;
+        }
+
+        /* ======================
+           التذييل
+        ====================== */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .footer-brand h3 span {
+            color: var(--gold);
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            max-width: 300px;
+        }
+
+        .footer-links h4,
+        .footer-social h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            padding: 5px 0;
+        }
+
+        .footer-links ul li a {
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--gold);
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.3rem;
+        }
+
+        .social-icons a:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ======================
+           استجابة للجوال
+        ====================== */
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+            .modal-content {
+                padding: 25px 20px;
+            }
+            .modal-content .modal-body ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(15, 14, 23, 0.98);
+                backdrop-filter: blur(18px);
+                width: 100%;
+                padding: 25px 0;
+                border-radius: 16px;
+                margin-top: 15px;
+                gap: 5px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .section-header h1 {
+                font-size: 2rem;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-content .modal-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-header h1 {
+                font-size: 1.6rem;
+            }
+            .portfolio-info h3 {
+                font-size: 1.2rem;
+            }
+            .modal-content {
+                padding: 20px 15px;
+            }
+            .modal-content .modal-header .modal-icon {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== شريط التنقل ========== -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span>المهندس</span> مازن عبد المعز</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عني</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="portfolio.html" class="active">أعمالي</a></li>
+                <li><a href="contact.html">اتصل بي</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== صفحة الأعمال ========== -->
+    <section class="page-section portfolio-page">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📂 معرض أعمالي</span>
+                <h1>مشاريعي <span class="highlight">المنجزة</span></h1>
+                <p>نماذج من مشاريعي التي تعكس مهاراتي وخبراتي في تطوير التطبيقات والمواقع</p>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- المشروع 1: إدارة المدخرات -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/MAZEN.jpg" alt="تطبيق إدارة المدخرات" />
+                        <div class="portfolio-overlay">
+                            <button class="btn-details" onclick="openModal(1)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><span class="emoji">💰</span> تطبيق إدارة المدخرات</h3>
+                        <p class="project-description">
+                            تطبيق <strong>Flutter</strong> متكامل لإدارة المدخرات المالية، يساعد المستخدمين على تتبع أهدافهم الادخارية.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Flutter</span><span>Firebase</span><span>Firestore</span><span>Provider</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المشروع 2: رفيق الذكر -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/icon.jpg" alt="تطبيق رفيق الذكر" />
+                        <div class="portfolio-overlay">
+                            <button class="btn-details" onclick="openModal(2)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><span class="emoji">🕌</span> تطبيق رفيق الذكر</h3>
+                        <p class="project-description">
+                            تطبيق <strong>Flutter</strong> للأذكار اليومية والأدعية، يساعد المستخدمين على ترديد الأذكار في أوقاتها.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Flutter</span><span>SQLite</span><span>Local Notifications</span><span>Provider</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المشروع 3: ركن الطبيعة للعطارة -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/m.png" alt="تطبيق ركن الطبيعة للعطارة" />
+                        <div class="portfolio-overlay">
+                            <button class="btn-details" onclick="openModal(3)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><span class="emoji">🌿</span> تطبيق ركن الطبيعة للعطارة</h3>
+                        <p class="project-description">
+                            تطبيق <strong>Flutter</strong>  للعطارة والأعشاب الطبية، يعرض المنتجات والفئات مع نظام بحث متقدم.وكذالك نظام مبيعات بنفس الوقت 
+                        </p>
+                        <div class="tech-tags">
+                            <span>Flutter</span><span>Firebase</span><span>Firestore</span><span>Provider</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المشروع 4: My Wallet -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images\mma.jpg" alt="تطبيق My Wallet" />
+                        <div class="portfolio-overlay">
+                            <button class="btn-details" onclick="openModal(4)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><span class="emoji">💳</span> تطبيق My Wallet</h3>
+                        <p class="project-description">
+                            تطبيق <strong>Flutter</strong> لإدارة المصروفات الشخصية، تتبع الدخل والخرج وتحليلها بشكل احترافي.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Flutter</span><span>Firebase</span><span>Firestore</span><span>Provider</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المشروع 5: متجر العطارة الإلكتروني -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images\mmmmm.jpg" alt=" ❤️ تطبيق مسجات" />
+                        <div class="portfolio-overlay">
+                            <button class="btn-details" onclick="openModal(5)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><span class="emoji"></span>   ❤️ تطبيق مسجات </h3>
+                        <p class="project-description">
+                         مكتبتك للمسجات والعبارات وحالات واتساب <strong>  أكثر من 900 مسجة منظمة في 14 قسمًا</strong>،💬 حب • حزن • شوق • عتاب • ديني • مناسبات • والمزيد
+                        </p>
+                        <div class="tech-tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- نافذة التفاصيل المنبثقة (Modal) -->
+    <!-- ========================================================== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+
+            <div class="modal-header">
+                <span class="modal-icon" id="modalIcon"><i class="fas fa-piggy-bank"></i></span>
+                <h2>تفاصيل <span id="modalTitle">المشروع</span></h2>
+            </div>
+
+            <div class="modal-body" id="modalBody">
+                <!-- يتم ملؤها بواسطة JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== التذييل ========== -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>مازن <span>عبد المعز</span></h3>
+                <p>مطور تطبيقات ومواقع ويب، أحول الأفكار إلى واقع رقمي.</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عني</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="portfolio.html">أعمالي</a></li>
+                    <li><a href="contact.html">اتصل بي</a></li>
+                </ul>
+            </div>
+                      <div class="footer-social">
+    <h4>تابعني</h4>
+    <div class="social-icons" style="display:flex;gap:20px;justify-content:center;font-size:1.8rem;">
+        <!-- تليجرام -->
+        <a href="https://t.me/ENG_MAZENNN" target="_blank" 
+           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
+           onmouseover="this.style.color='#0088cc';this.style.transform='scale(1.2)';"
+           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+           </svg>
+        </a>
+        <!-- واتساب -->
+        <a href="https://wa.me/967712433463" target="_blank" 
+           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
+           onmouseover="this.style.color='#25D366';this.style.transform='scale(1.2)';"
+           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+           </svg>
+        </a>
+        <!-- إنستغرام -->
+        <a href="https://instagram.com/eng.m_azen" target="_blank" 
+           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
+           onmouseover="this.style.color='#E4405F';this.style.transform='scale(1.2)';"
+           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+           </svg>
+        </a>
+        <!-- فيسبوك -->
+        <a href="https://facebook.com/مازن عبد المعز الشرقي" target="_blank" 
+           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
+           onmouseover="this.style.color='#1877F2';this.style.transform='scale(1.2)';"
+           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+           </svg>
+        </a>
+    </div>
+</div>
+        <div class="footer-bottom">
+            <p>&copy; المهندس مازن عبد المعز. جميع الحقوق محفوظة    . 2026-2027</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================================
+        // بيانات المشاريع
+        // ==========================================================
+        var projectsData = {
+            1: {
+                title: ' تطبيق إدارة المدخرات - قيد التطوير ',
+                icon: 'fa-piggy-bank',
+                description: `
+
+                    <p>تطبيق <strong>Flutter</strong> متكامل لإدارة المدخرات المالية، يساعد المستخدمين على تتبع أهدافهم الادخارية وتحقيقها بسهولة.</p>
+                    <div class="highlight-box">
+                        <p><strong>🎯 الهدف:</strong> تمكين المستخدم من إدارة مدخراته بشكل احترافي وتحديد أهداف ادخارية ومتابعة التقدم نحو تحقيقها.</p>
+                    </div>
+                    <h4><i class="fas fa-check-circle"></i> المميزات الرئيسية:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> إنشاء أهداف ادخارية متعددة</li>
+                        <li><i class="fas fa-check-circle"></i> تتبع التقدم اليومي والشهري</li>
+                        <li><i class="fas fa-check-circle"></i> إشعارات تذكيرية</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير وإحصائيات</li>
+                        <li><i class="fas fa-check-circle"></i> مزامنة مع Firebase</li>
+                        <li><i class="fas fa-check-circle"></i> واجهة مستخدم سهلة وبسيطة</li>
+                    </ul>
+                    <h4><i class="fas fa-code"></i> التقنيات المستخدمة:</h4>
+                    <div class="tech-tags-modal">
+                        <span>Flutter</span><span>Firebase</span><span>Firestore</span>
+                        <span>Provider</span><span>Local Notifications</span>
+                    </div>
+                `
+            },
+
+
+
+    2: {
+    title: 'تطبيق رفيق الذكر',
+    icon: 'fa-mosque',
+
+  
+    description: `
+        <div class="app-description">
+
+            <!-- مقدمة التطبيق -->
+            <div class="app-intro">
+                <p>
+                    <strong>رفيق الذكر</strong> تطبيق Flutter للأذكار اليومية
+                    والأدعية، صُمم لمساعدتك على المحافظة على أذكارك،
+                    وتنظيمها، ومتابعة تقدمك اليومي بسهولة.
+                </p>
+            </div>
+
+            <!-- الهدف -->
+            <div class="highlight-box">
+                <p>
+                    <strong>
+                        <i class="fas fa-bullseye"></i>
+                        الهدف من التطبيق
+                    </strong>
+                </p>
+
+                <p>
+                    مساعدة المستخدم على المحافظة على الأذكار اليومية
+                    وتنظيمها ومتابعة مدى الالتزام بها، مع إمكانية استخدام
+                    التطبيق <strong>بدون الحاجة إلى الإنترنت</strong>.
+                </p>
+            </div>
+
+            <!-- المميزات -->
+            <h4>
+                <i class="fas fa-star"></i>
+                المميزات الرئيسية
+            </h4>
+
+            <ul class="features-list">
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>أذكار الصباح والمساء</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>أذكار النوم والاستيقاظ</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>إشعارات تذكيرية للأذكار</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>عداد التسبيح</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>متابعة التقدم اليومي</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>سلسلة الالتزام والاستمرارية</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>يعمل بدون اتصال بالإنترنت</span>
+                </li>
+
+            </ul>
+
+            <!-- التقنيات -->
+            <h4>
+                <i class="fas fa-code"></i>
+                التقنيات المستخدمة
+            </h4>
+
+            <div class="tech-tags-modal">
+                <span>Flutter</span>
+                <span>SQLite</span>
+                <span>Provider</span>
+                <span>Local Notifications</span>
+            </div>
+
+            <!-- قسم التحميل -->
+            <div class="download-section">
+
+                <div class="download-info">
+
+                    <div class="android-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+
+                    <div class="download-text">
+                        <strong>تحميل تطبيق رفيق الذكر</strong>
+
+                        <small>
+                            تطبيق Android • ملف APK
+                        </small>
+                    </div>
+
+                </div>
+
+                <a
+                    href="app-release.apk"
+                    download="dhikr_companion.apk"
+                    class="download-apk-btn"
+                >
+                    <i class="fas fa-download"></i>
+                    <span>تحميل التطبيق APK</span>
+                </a>
+
+                <p class="download-note">
+                    <i class="fas fa-info-circle"></i>
+                    اضغط على الزر لبدء تحميل التطبيق مباشرة
+                </p>
+
+            </div>
+
+        </div>
+    `
+},
+
+
+
+            3: {
+                title: 'تطبيق ركن الطبيعة للعطارة - قيد التطوير',
+                icon: 'fa-leaf',
+                description: `
+                    <p>تطبيق <strong>Flutter</strong> \ العطارة والأعشاب الطبية، يعرض المنتجات والفئات مع نظام بحث متقدم ونظام مبيعات ومتابعة للعطارة كامل.</p>
+                    <div class="highlight-box">
+                        <p><strong>🎯 الهدف:</strong> توفير تطبيق سهلة الاستخدام لعرض منتجات العطارة، مع إمكانية البحث  وبيع ومعرفة اسعار الشراء والبيع ومتابعة العطارة من نقص المنتجات وجميع حساباتها.</p>
+                    </div>
+                    <h4><i class="fas fa-check-circle"></i> المميزات الرئيسية:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> عرض المنتجات والفئات</li>
+                        <li><i class="fas fa-check-circle"></i> نظام بحث متقدم</li>
+                        <li><i class="fas fa-check-circle"></i>  نظام مبيعات</li>
+                        <li><i class="fas fa-check-circle"></i> نظام تتبع العملاء والديون والمناديب </li>
+                        <li><i class="fas fa-check-circle"></i>  تطبيق سهل الاستخدام </li>
+                        <li><i class="fas fa-check-circle"></i>  إدارة المخزون</li>
+                    </ul>
+                    <h4><i class="fas fa-code"></i> التقنيات المستخدمة:</h4>
+                    <div class="tech-tags-modal">
+                        <span>Flutter</span><span>Firebase</span><span>Firestore</span>
+                        <span>Provider</span><span>Image Picker</span>
+                    </div>
+                `
+            },
+            4: {
+                title: ' تطبيق  My Wallet   قيد التطوير         ',
+                icon: 'fa-wallet',
+                description: `
+                    <p>تطبيق <strong>Flutter</strong> لإدارة المصروفات الشخصية، تتبع الدخل والخرج وتحليلها بشكل احترافي مع تقارير مفصلة.</p>
+                    <div class="highlight-box">
+                        <p><strong>🎯 الهدف:</strong> تمكين المستخدم من تتبع مصروفاته اليومية وإدارة ميزانيته الشخصية بشكل احترافي وسهل.</p>
+                    </div>
+                    <h4><i class="fas fa-check-circle"></i> المميزات الرئيسية:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> تتبع الدخل والخرج</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير وإحصائيات</li>
+                        <li><i class="fas fa-check-circle"></i> تصنيف المعاملات</li>
+                        <li><i class="fas fa-check-circle"></i> ميزانية شهرية</li>
+                        <li><i class="fas fa-check-circle"></i> مزامنة مع Firebase</li>
+                        <li><i class="fas fa-check-circle"></i> رسوم بيانية</li>
+                    </ul>
+                    <h4><i class="fas fa-code"></i> التقنيات المستخدمة:</h4>
+                    <div class="tech-tags-modal">
+                        <span>Flutter</span><span>Firebase</span><span>Firestore</span>
+                        <span>Provider</span><span>Charts</span>
+                    </div>
+                `
+            },
+            5: {
+               
+    title: 'تطبيق مسجاتي ❤️',
+    icon: 'fa-comment-heart',
+
+    description: `
+        <div class="app-description">
+
+            <!-- مقدمة التطبيق -->
+            <div class="app-intro">
+                <p>
+                    <strong>مسجاتي</strong> تطبيق Flutter عربي متكامل
+                    يوفّر مكتبة شاملة من المسجات والعبارات وحالات واتساب،
+                    مرتبة حسب النوع والمشاعر والمناسبة والشخص،
+                    ليجد المستخدم العبارة المناسبة بسرعة وسهولة.
+                </p>
+            </div>
+
+            <!-- الهدف -->
+            <div class="highlight-box">
+                <p>
+                    <strong>
+                        <i class="fas fa-bullseye"></i>
+                        الهدف من التطبيق
+                    </strong>
+                </p>
+
+                <p>
+                    توفير مكتبة عربية جميلة ومنظمة من المسجات والعبارات،
+                    بدلًا من البحث عنها في مواقع الإنترنت المتناثرة،
+                    مع إمكانية استخدام التطبيق
+                    <strong>بدون إنترنت وبدون حساب</strong>.
+                </p>
+            </div>
+
+            <!-- المميزات -->
+            <h4>
+                <i class="fas fa-star"></i>
+                المميزات الرئيسية
+            </h4>
+
+            <ul class="features-list">
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>مكتبة ضخمة من المسجات المنظمة</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>مسجات الحب والحزن والشوق والعتاب</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>أدعية وأذكار وآيات قرآنية موثقة</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>حالات واتساب بأنواعها المختلفة</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>بحث سريع بالعربية يدعم الهمزات</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>حفظ في المفضلة محليًا بدون حساب</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>نسخ ومشاركة بضغطة واحدة</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>رسالة يومية متجددة ومسجة عشوائية</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>وضع ليلي كامل مريح للعين</span>
+                </li>
+
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span>يعمل بدون اتصال بالإنترنت</span>
+                </li>
+
+            </ul>
+
+            <!-- التقنيات -->
+            <h4>
+                <i class="fas fa-code"></i>
+                التقنيات المستخدمة
+            </h4>
+
+            <div class="tech-tags-modal">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Riverpod</span>
+                <span>Shared Preferences</span>
+                <span>Share Plus</span>
+                <span>URL Launcher</span>
+            </div>
+
+            <!-- قسم التحميل -->
+            <div class="download-section">
+
+                <div class="download-info">
+
+                    <div class="android-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+
+                    <div class="download-text">
+                        <strong>تحميل تطبيق مسجاتي</strong>
+
+                        <small>
+                            تطبيق Android • ملف APK
+                        </small>
+                    </div>
+
+                </div>
+
+                <a
+                    href="m.apk"
+                    download="masajati.apk"
+                    class="download-apk-btn"
+                >
+                    <i class="fas fa-download"></i>
+                    <span>تحميل التطبيق APK</span>
+                </a>
+
+                <p class="download-note">
+                    <i class="fas fa-info-circle"></i>
+                    اضغط على الزر لبدء تحميل التطبيق مباشرة
+                </p>
+
+            </div>
+
+            <!-- معلومات المطوّر -->
+            <div class="highlight-box" style="margin-top: 20px;">
+                <p>
+                    <strong>
+                        <i class="fas fa-user-tie"></i>
+                        المطوّر
+                    </strong>
+                </p>
+
+                <p>
+                    المهندس مازن عبد المعز
+                    <br>
+                    <i class="fas fa-phone"></i>
+                    712433463
+                </p>
+            </div>
+
+        </div>
+    `
+
+            }
+        };
+
+        // ==========================================================
+        // دوال التحكم في النافذة المنبثقة
+        // ==========================================================
+        function openModal(projectId) {
+            var data = projectsData[projectId];
+            if (!data) return;
+
+            document.getElementById('modalIcon').innerHTML = '<i class="fas ' + data.icon + '"></i>';
+            document.getElementById('modalTitle').textContent = data.title;
+            
+            // ==========================================
+            // 🔗 إضافة زر الرابط
+            // ==========================================
+            var linkButton = '';
+            if (data.link) {
+                linkButton = `
+                    <div style="margin: 0 0 15px 0; text-align: center; padding: 12px; background: rgba(255,137,6,0.05); border-radius: 12px; border: 1px solid rgba(255,137,6,0.1);">
+                        <a href="${data.link}" target="_blank" 
+                           style="display: inline-flex; align-items: center; gap: 10px; 
+                                  background: #ff8906; color: #0f0e17; 
+                                  padding: 10px 30px; border-radius: 50px; 
+                                  font-weight: 700; text-decoration: none; 
+                                  transition: 0.3s; border: 2px solid transparent;
+                                  font-size: 0.95rem;">
+                            <i class="fas fa-external-link-alt"></i> 
+                            🔗 زيارة المشروع على GitHub
+                        </a>
+                    </div>
+                `;
+            }
+            // ==========================================
+            
+            document.getElementById('modalBody').innerHTML = linkButton + data.description;
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // إغلاق النافذة بالضغط خارج المحتوى
+        document.addEventListener('click', function(event) {
+            var overlay = document.getElementById('modalOverlay');
+            if (event.target === overlay) {
+                closeModal();
+            }
+        });
+
+        // إغلاق النافذة بالضغط على ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ==========================================================
+        // شريط التنقل
+        // ==========================================================
+        var menuToggle = document.getElementById('mobile-menu');
+        var navLinks = document.getElementById('navLinks');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        var navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
