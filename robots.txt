@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mazenalsharq22-lab.github.io/mazen_a_a/sitemap.xml
