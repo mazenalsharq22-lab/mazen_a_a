@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
         <loc>https://mazenalsharq22-lab.github.io/mazen_a_a/</loc>
+    </url>
+
+    <url>
+        <loc>https://mazenalsharq22-lab.github.io/mazen_a_a/about.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mazenalsharq22-lab.github.io/mazen_a_a/portfolio.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mazenalsharq22-lab.github.io/mazen_a_a/services.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mazenalsharq22-lab.github.io/mazen_a_a/contact.html</loc>
     </url>
 
 </urlset>
