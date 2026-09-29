@@ -1,417 +1,1030 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
 
     <!-- Google Search Console -->
     <meta name="google-site-verification"
-          content="iiGdF2uuU9yVvdqaG_cOqXJMwMVgN0vg58eUgwVLRSY" />
+        content="iiGdF2uuU9yVvdqaG_cOqXJMwMVgN0vg58eUgwVLRSY">
 
     <!-- Mobile -->
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO الأساسي -->
+    <!-- SEO -->
     <title>المهندس مازن عبد المعز | مبرمج ومطور تطبيقات وذكاء اصطناعي</title>
 
     <meta name="description"
-          content="المهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي. أعمل على تطوير تطبيقات Flutter، مواقع الويب، Firebase ومشاريع الذكاء الاصطناعي." />
+        content="المهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي. أعمل على تطوير تطبيقات Flutter ومواقع الويب وFirebase ومشاريع الذكاء الاصطناعي والتعلم الآلي ورؤية الحاسوب.">
 
-    <meta name="author"
-          content="المهندس مازن عبد المعز" />
+    <meta name="author" content="مازن عبد المعز">
 
     <meta name="robots"
-          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <meta name="language"
-          content="Arabic" />
-
-    <meta name="revisit-after"
-          content="7 days" />
+    <meta name="language" content="Arabic">
 
     <!-- Canonical -->
     <link rel="canonical"
-          href="https://mazenalsharq22-lab.github.io/mazen_a_a/" />
+        href="https://mazenalsharq22-lab.github.io/mazen_a_a/">
 
-    <!-- اللغة -->
     <link rel="alternate"
-          hreflang="ar"
-          href="https://mazenalsharq22-lab.github.io/mazen_a_a/" />
+        hreflang="ar"
+        href="https://mazenalsharq22-lab.github.io/mazen_a_a/">
 
     <!-- Open Graph -->
-    <meta property="og:type"
-          content="website" />
+    <meta property="og:type" content="website">
 
     <meta property="og:title"
-          content="المهندس مازن عبد المعز | مبرمج ومطور تطبيقات وذكاء اصطناعي" />
+        content="المهندس مازن عبد المعز | مبرمج ومطور تطبيقات وذكاء اصطناعي">
 
     <meta property="og:description"
-          content="الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات Flutter ومواقع الويب ومشاريع الذكاء الاصطناعي." />
+        content="الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات Flutter ومواقع الويب ومشاريع الذكاء الاصطناعي.">
 
     <meta property="og:url"
-          content="https://mazenalsharq22-lab.github.io/mazen_a_a/" />
+        content="https://mazenalsharq22-lab.github.io/mazen_a_a/">
 
     <meta property="og:site_name"
-          content="المهندس مازن عبد المعز" />
+        content="المهندس مازن عبد المعز">
 
-    <meta property="og:locale"
-          content="ar_AR" />
+    <meta property="og:locale" content="ar_AR">
 
     <meta property="og:image"
-          content="https://mazenalsharq22-lab.github.io/mazen_a_a/images/mazen.png" />
+        content="https://mazenalsharq22-lab.github.io/mazen_a_a/images/mazen.png">
 
     <meta property="og:image:alt"
-          content="المهندس مازن عبد المعز - مبرمج ومطور تطبيقات وذكاء اصطناعي" />
+        content="المهندس مازن عبد المعز - مبرمج ومطور تطبيقات وذكاء اصطناعي">
 
     <!-- Twitter / X -->
-    <meta name="twitter:card"
-          content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta name="twitter:title"
-          content="المهندس مازن عبد المعز | مبرمج ومطور تطبيقات وذكاء اصطناعي" />
+        content="المهندس مازن عبد المعز | مبرمج ومطور تطبيقات وذكاء اصطناعي">
 
     <meta name="twitter:description"
-          content="الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي." />
+        content="الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي.">
 
     <meta name="twitter:image"
-          content="https://mazenalsharq22-lab.github.io/mazen_a_a/images/mazen.png" />
+        content="https://mazenalsharq22-lab.github.io/mazen_a_a/images/mazen.png">
 
-    <!-- Structured Data: ProfilePage + Person -->
+    <!-- =====================================================
+         Structured Data - ProfilePage
+    ====================================================== -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "@id": "https://mazenalsharq22-lab.github.io/mazen_a_a/#profile",
-      "url": "https://mazenalsharq22-lab.github.io/mazen_a_a/",
-      "name": "المهندس مازن عبد المعز",
-      "description": "الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي.",
-      "mainEntity": {
-        "@type": "Person",
-        "@id": "https://mazenalsharq22-lab.github.io/mazen_a_a/#person",
-        "name": "مازن عبد المعز",
-        "alternateName": [
-          "المهندس مازن عبد المعز",
-          "المبرمج مازن عبد المعز",
-          "المهندس مازن",
-          "المبرمج مازن",
-          "مازن"
-        ],
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+
+        "@id": "https://mazenalsharq22-lab.github.io/mazen_a_a/#profile",
+
         "url": "https://mazenalsharq22-lab.github.io/mazen_a_a/",
-        "image": "https://mazenalsharq22-lab.github.io/mazen_a_a/images/mazen.png",
-        "jobTitle": "مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي",
-        "description": "مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع ومشاريع ذكاء اصطناعي، متخصص في Flutter وFirebase وتطوير حلول تقنية حديثة.",
-        "knowsAbout": [
-          "Flutter",
-          "Dart",
-          "Firebase",
-          "Artificial Intelligence",
-          "Machine Learning",
-          "Computer Vision",
-          "Python",
-          "FastAPI",
-          "Web Development",
-          "Mobile App Development"
-        ],
-        "sameAs": [
-          "https://github.com/mazenalsharq22-lab",
-          "https://t.me/ENG_MAZENNN",
-          "https://instagram.com/eng.m_azen"
-        ]
-      }
+
+        "name": "المهندس مازن عبد المعز",
+
+        "description": "الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي.",
+
+        "mainEntity": {
+
+            "@type": "Person",
+
+            "@id": "https://mazenalsharq22-lab.github.io/mazen_a_a/#person",
+
+            "name": "مازن عبد المعز",
+
+            "alternateName": [
+                "المهندس مازن عبد المعز",
+                "المبرمج مازن عبد المعز",
+                "المهندس مازن",
+                "المبرمج مازن",
+                "مازن عبد المعز"
+            ],
+
+            "url": "https://mazenalsharq22-lab.github.io/mazen_a_a/",
+
+            "image": "https://mazenalsharq22-lab.github.io/mazen_a_a/images/mazen.png",
+
+            "jobTitle": "مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي",
+
+            "description": "مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع ومشاريع ذكاء اصطناعي، يعمل على Flutter وFirebase وPython وتطوير الحلول التقنية الحديثة.",
+
+            "knowsAbout": [
+                "Flutter",
+                "Dart",
+                "Firebase",
+                "Python",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Computer Vision",
+                "FastAPI",
+                "Web Development",
+                "Mobile App Development",
+                "Software Development"
+            ],
+
+            "sameAs": [
+                "https://github.com/mazenalsharq22-lab",
+                "https://t.me/ENG_MAZENNN",
+                "https://instagram.com/eng.m_azen"
+            ]
+        }
     }
     </script>
 
-    <!-- WebSite Structured Data -->
+    <!-- =====================================================
+         Structured Data - WebSite
+    ====================================================== -->
+
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://mazenalsharq22-lab.github.io/mazen_a_a/#website",
-      "url": "https://mazenalsharq22-lab.github.io/mazen_a_a/",
-      "name": "المهندس مازن عبد المعز",
-      "alternateName": [
-        "مازن عبد المعز",
-        "المبرمج مازن",
-        "المهندس مازن"
-      ],
-      "description": "الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي.",
-      "inLanguage": "ar"
+        "@context": "https://schema.org",
+
+        "@type": "WebSite",
+
+        "@id": "https://mazenalsharq22-lab.github.io/mazen_a_a/#website",
+
+        "url": "https://mazenalsharq22-lab.github.io/mazen_a_a/",
+
+        "name": "المهندس مازن عبد المعز",
+
+        "alternateName": [
+            "مازن عبد المعز",
+            "المبرمج مازن عبد المعز",
+            "المهندس مازن",
+            "المبرمج مازن"
+        ],
+
+        "description": "الموقع الشخصي للمهندس مازن عبد المعز، مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي.",
+
+        "inLanguage": "ar"
     }
     </script>
 
-    <!-- الخطوط -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin />
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Poppins:wght@400;600;700&display=swap"
-          rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet"
-          href="style.css" />
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Social Icons CSS -->
     <style>
+
         .footer-social .social-icons a {
             color: #ffffff !important;
             font-size: 1.5rem !important;
             transition: 0.3s;
+
             background: rgba(255, 255, 255, 0.05);
+
             border-radius: 12px;
+
             width: 44px;
             height: 44px;
+
             display: inline-flex !important;
+
             align-items: center;
             justify-content: center;
+
             text-decoration: none;
+
             margin: 0 5px;
         }
 
         .footer-social .social-icons a:hover {
             color: #ff8906 !important;
+
             background: rgba(255, 137, 6, 0.15);
+
             transform: translateY(-4px);
         }
 
         .hero-social a {
             color: rgba(255, 255, 255, 0.7) !important;
+
             font-size: 1.3rem !important;
+
             transition: 0.3s;
+
             width: 42px;
             height: 42px;
+
             display: inline-flex !important;
+
             align-items: center;
             justify-content: center;
+
             border-radius: 50%;
+
             background: rgba(255, 255, 255, 0.05);
+
             text-decoration: none;
+
             margin: 0 5px;
         }
 
         .hero-social a:hover {
             color: #ff8906 !important;
+
             background: rgba(255, 137, 6, 0.15);
+
             transform: translateY(-3px);
         }
 
         .social-icons {
             display: flex !important;
+
             gap: 12px;
+
             justify-content: center;
+
+            flex-wrap: wrap;
         }
 
         .hero-social {
             display: flex !important;
+
             gap: 20px;
+
             justify-content: center;
+
+            flex-wrap: wrap;
         }
+
+        /* SEO Intro */
+
+        .about-seo {
+            position: relative;
+        }
+
+        .seo-intro {
+            max-width: 950px;
+
+            margin: 40px auto 0;
+
+            line-height: 2;
+
+            text-align: right;
+        }
+
+        .seo-intro p {
+            margin-bottom: 18px;
+        }
+
+        .seo-intro strong {
+            font-weight: 800;
+        }
+
+        /* Accessibility */
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #ff8906;
+
+            outline-offset: 4px;
+        }
+
     </style>
+
 </head>
+
+
 <body>
 
-    <!-- شريط التنقل -->
+
+    <!-- =====================================================
+         Navigation
+    ====================================================== -->
+
     <nav id="navbar">
+
         <div class="container nav-container">
+
             <div class="logo">
-                <a href="index.html"><span>المهندس</span> مازن عبد المعز</a>
+
+                <a href="index.html"
+                   aria-label="الصفحة الرئيسية - المهندس مازن عبد المعز">
+
+                    <span>المهندس</span>
+                    مازن عبد المعز
+
+                </a>
+
             </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">الرئيسية</a></li>
-                <li><a href="about.html">عني</a></li>
-                <li><a href="services.html">الخدمات</a></li>
-                <li><a href="portfolio.html">أعمالي</a></li>
-                <li><a href="contact.html">اتصل بي</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    الرئيسية
+                </a>
+
+                <a href="about.html">
+                    عني
+                </a>
+
+                <a href="portfolio.html">
+                    أعمالي
+                </a>
+
+                <a href="services.html">
+                    خدماتي
+                </a>
+
+                <a href="contact.html">
+                    تواصل معي
+                </a>
+
+            </div>
+
+
+            <div class="menu-toggle"
+                 aria-label="فتح القائمة">
+
                 <i class="fas fa-bars"></i>
+
             </div>
+
         </div>
+
     </nav>
 
-    <!-- قسم الترحيب (Hero) -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-badge">مرحبًا بك في عالمي</span>
-                <h1>المهندس </h1>
-                   <h1> <span class="highlight"> مازن عبد المعز</span></h1>
-                <div class="typing-wrapper">
-                    <span class="typing-text" id="typingText"></span>
+
+
+    <!-- =====================================================
+         Hero Section
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+
+                <!-- Hero Content -->
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+
+                        مرحبًا بك في عالمي
+
+                    </span>
+
+
+                    <!-- H1 واحد فقط -->
+
+                    <h1>
+
+                        المهندس
+
+                        <span class="highlight">
+
+                            مازن عبد المعز
+
+                        </span>
+
+                    </h1>
+
+
+                    <div class="typing-wrapper">
+
+                        <span
+                            class="typing-text"
+                            id="typingText">
+                        </span>
+
+                    </div>
+
+
+                    <p class="hero-description">
+
+                        أنا <strong>مازن عبد المعز</strong>،
+                        مبرمج ومطور تطبيقات ومواقع وذكاء اصطناعي،
+                        أعمل على تطوير تطبيقات Flutter،
+                        مواقع الويب، Firebase والحلول التقنية الحديثة.
+
+                    </p>
+
+
+                    <!-- Buttons -->
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="portfolio.html"
+                            class="btn btn-primary">
+
+                            استكشف أعمالي
+
+                            <i class="fas fa-arrow-left"></i>
+
+                        </a>
+
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-secondary">
+
+                            تواصل معي
+
+                            <i class="fas fa-paper-plane"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Social -->
+
+                    <div class="hero-social">
+
+                        <a
+                            href="https://github.com/mazenalsharq22-lab"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub">
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://t.me/ENG_MAZENNN"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Telegram">
+
+                            <i class="fab fa-telegram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/967712433463"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://instagram.com/eng.m_azen"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                    </div>
+
                 </div>
-                <p class="hero-description">
-                    أحول الأفكار إلى تطبيقات ومواقع احترافية تخدم أهدافك.
-                </p>
-                <div class="hero-buttons">
-                    <a href="portfolio.html" class="btn-primary">شاهد أعمالي <i class="fas fa-arrow-left"></i></a>
-                    <a href="contact.html" class="btn-glass">تواصل معي</a>
-                </div>
-                  <div class="footer-social">
-    <h4>تابعني</h4>
-    <div class="social-icons" style="display:flex;gap:20px;justify-content:center;font-size:1.8rem;">
-        <!-- تليجرام -->
-        <a href="https://t.me/ENG_MAZENNN" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#0088cc';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-           </svg>
-        </a>
-        <!-- واتساب -->
-        <a href="https://wa.me/967712433463" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#25D366';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-           </svg>
-        </a>
-        <!-- إنستغرام -->
-        <a href="https://instagram.com/eng.m_azen" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#E4405F';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-           </svg>
-        </a>
-        <!-- فيسبوك -->
-        <a href="https://facebook.com/مازن عبد المعز الشرقي" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#1877F2';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-           </svg>
-        </a>
+
+
+
+                <!-- Hero Image -->
+<div class="hero-image">
+
+    <div class="image-wrapper">
+
+        <img
+            src="images/mazen.png"
+            alt="المهندس مازن عبد المعز - مبرمج ومطور تطبيقات وذكاء اصطناعي">
+
+        <div class="floating-badge">
+
+            <i class="fas fa-code"></i>
+
+            <span>
+                مطور تطبيقات
+            </span>
+
+        </div>
+
+
+        <div class="floating-badge second">
+
+            <i class="fas fa-mobile-alt"></i>
+
+            <span>
+                Flutter
+            </span>
+
+        </div>
+
     </div>
+
 </div>
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="images\mazen.png" />
-                    <div class="floating-badge">
-                        <i class="fas fa-code"></i>
-                        <span>مطور تطبيقات</span>
-                    </div>
-                    <div class="floating-badge second">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Flutter</span>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- شكل موجي سفلي -->
-        <div class="wave">
-            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,40 C360,80 720,20 1080,60 C1260,80 1380,70 1440,50 L1440,100 L0,100 Z" fill="#fffffe" />
-            </svg>
-        </div>
-    </section>
 
-    <!-- قسم الخدمات المختصرة -->
-    <section class="services-short section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">ماذا أقدم</span>
-                <h2>خدماتي <span class="highlight">الاحترافية</span></h2>
-                <p>حلول تقنية متكاملة تناسب احتياجاتك</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card glass-card">
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>تطبيقات Flutter</h3>
-                    <p>تطبيقات Android و iOS بكود واحد، مع واجهات سلسة وأداء عالي.</p>
-                    <a href="services.html" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
-                </div>
-                <div class="service-card glass-card">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h3>مواقع ويب</h3>
-                    <p>مواقع متجاوبة عصرية وسريعة، تعمل على جميع الأجهزة.</p>
-                    <a href="services.html" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
-                </div>
-                <div class="service-card glass-card">
-                    <div class="service-icon"><i class="fas fa-database"></i></div>
-                    <h3>Firebase</h3>
-                    <p>تطبيقات مع قواعد بيانات، مصادقة، تخزين، وإشعارات فورية.</p>
-                    <a href="services.html" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- التذييل -->
+        </section>
+
+
+
+        <!-- =====================================================
+             About SEO Section
+        ====================================================== -->
+
+        <section class="about-seo section-padding">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-tag">
+                        من أنا
+                    </span>
+
+
+                    <h2>
+
+                        مازن عبد المعز
+
+                        <span class="highlight">
+                            مبرمج ومطور
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        المهندس مازن عبد المعز هو مبرمج ومطور
+                        تطبيقات ومواقع يهتم بتطوير الحلول الرقمية
+                        والذكاء الاصطناعي.
+
+                    </p>
+
+                </div>
+
+
+                <div class="seo-intro">
+
+                    <p>
+
+                        <strong>
+                            مازن عبد المعز
+                        </strong>
+
+                        مبرمج ومطور تطبيقات ومواقع،
+                        أعمل على بناء تطبيقات الهواتف باستخدام
+                        <strong>Flutter وDart</strong>،
+                        وتطوير مواقع الويب والحلول الرقمية الحديثة.
+
+                    </p>
+
+
+                    <p>
+
+                        كما أعمل على مشاريع تعتمد على
+                        <strong>
+                            الذكاء الاصطناعي والتعلم الآلي ورؤية الحاسوب
+                        </strong>
+
+                        باستخدام Python وتقنيات وأدوات حديثة.
+
+                    </p>
+
+
+                    <p>
+
+                        تشمل خبرتي أيضًا تطوير التطبيقات باستخدام
+                        <strong>Firebase</strong>،
+                        وقواعد البيانات،
+                        وواجهات برمجة التطبيقات،
+                        وبناء الأنظمة الرقمية.
+
+                    </p>
+
+
+                    <p>
+
+                        إذا كنت تبحث عن
+                        <strong>
+                            المبرمج مازن عبد المعز
+                        </strong>
+
+                        أو
+                        <strong>
+                            المهندس مازن عبد المعز
+                        </strong>
+
+                        فهذا هو الموقع الشخصي الذي يجمع معلوماتي
+                        ومشاريعي وأعمالي التقنية.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             Services
+        ====================================================== -->
+
+        <section class="services section-padding">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-tag">
+                        ماذا أقدم؟
+                    </span>
+
+                    <h2>
+                        خدماتي
+                    </h2>
+
+                    <p>
+                        حلول تقنية حديثة تساعد على تحويل الأفكار
+                        إلى مشاريع رقمية عملية.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- Flutter -->
+
+                    <div class="service-card glass-card">
+
+                        <div class="service-icon">
+
+                            <i class="fas fa-mobile-screen-button"></i>
+
+                        </div>
+
+                        <h3>
+                            تطوير تطبيقات Flutter
+                        </h3>
+
+                        <p>
+
+                            تطوير تطبيقات الهواتف الذكية
+                            باستخدام Flutter وDart
+                            مع تصميم واجهات حديثة وسهلة الاستخدام.
+
+                        </p>
+
+                        <a
+                            href="services.html"
+                            class="card-link">
+
+                            اكتشف المزيد
+
+                            <i class="fas fa-arrow-left"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Websites -->
+
+                    <div class="service-card glass-card">
+
+                        <div class="service-icon">
+
+                            <i class="fas fa-code"></i>
+
+                        </div>
+
+                        <h3>
+                            تطوير مواقع الويب
+                        </h3>
+
+                        <p>
+
+                            إنشاء وتطوير مواقع ويب حديثة
+                            ومتجاوبة باستخدام HTML وCSS وJavaScript
+                            وتقنيات الويب الحديثة.
+
+                        </p>
+
+                        <a
+                            href="services.html"
+                            class="card-link">
+
+                            اكتشف المزيد
+
+                            <i class="fas fa-arrow-left"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Firebase -->
+
+                    <div class="service-card glass-card">
+
+                        <div class="service-icon">
+
+                            <i class="fas fa-fire"></i>
+
+                        </div>
+
+                        <h3>
+                            Firebase والحلول السحابية
+                        </h3>
+
+                        <p>
+
+                            بناء التطبيقات المتصلة بالخدمات السحابية
+                            وقواعد البيانات والمصادقة والإشعارات
+                            باستخدام Firebase.
+
+                        </p>
+
+                        <a
+                            href="services.html"
+                            class="card-link">
+
+                            اكتشف المزيد
+
+                            <i class="fas fa-arrow-left"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Artificial Intelligence -->
+
+                    <div class="service-card glass-card">
+
+                        <div class="service-icon">
+
+                            <i class="fas fa-brain"></i>
+
+                        </div>
+
+                        <h3>
+                            الذكاء الاصطناعي
+                        </h3>
+
+                        <p>
+
+                            تطوير مشاريع الذكاء الاصطناعي
+                            والتعلم الآلي ورؤية الحاسوب
+                            باستخدام Python وتقنيات حديثة.
+
+                        </p>
+
+                        <a
+                            href="services.html"
+                            class="card-link">
+
+                            اكتشف المزيد
+
+                            <i class="fas fa-arrow-left"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             Portfolio Preview
+        ====================================================== -->
+
+        <section class="portfolio-preview section-padding">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-tag">
+                        أعمالي
+                    </span>
+
+                    <h2>
+                        أحدث المشاريع
+                    </h2>
+
+                    <p>
+
+                        مجموعة من المشاريع والتطبيقات
+                        والحلول التقنية التي عملت عليها.
+
+                    </p>
+
+                </div>
+
+
+                <div class="portfolio-button">
+
+                    <a
+                        href="portfolio.html"
+                        class="btn btn-primary">
+
+                        مشاهدة جميع المشاريع
+
+                        <i class="fas fa-arrow-left"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         Footer
+    ====================================================== -->
+
     <footer>
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>مازن <span>عبد المعز</span></h3>
-                <p>مطور تطبيقات ومواقع ويب، أحول الأفكار إلى واقع رقمي.</p>
-            </div>
-            <div class="footer-links">
-                <h4>روابط سريعة</h4>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">عني</a></li>
-                    <li><a href="services.html">الخدمات</a></li>
-                    <li><a href="portfolio.html">أعمالي</a></li>
-                    <li><a href="contact.html">اتصل بي</a></li>
-                </ul>
-            </div>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <div class="footer-info">
+
+                    <h3>
+                        المهندس مازن عبد المعز
+                    </h3>
+
+                    <p>
+
+                        مبرمج ومطور تطبيقات ومواقع
+                        ومهتم بالذكاء الاصطناعي.
+
+                    </p>
+
+                </div>
+
+
+
                 <div class="footer-social">
-    <h4>تابعني</h4>
-    <div class="social-icons" style="display:flex;gap:20px;justify-content:center;font-size:1.8rem;">
-        <!-- تليجرام -->
-        <a href="https://t.me/ENG_MAZENNN" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#0088cc';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-           </svg>
-        </a>
-        <!-- واتساب -->
-        <a href="https://wa.me/967712433463" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#25D366';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-           </svg>
-        </a>
-        <!-- إنستغرام -->
-        <a href="https://instagram.com/eng.m_azen" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#E4405F';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-           </svg>
-        </a>
-        <!-- فيسبوك -->
-        <a href="https://facebook.com/مازن عبد المعز الشرقي" target="_blank" 
-           style="color:#ffffff;text-decoration:none;transition:0.3s;display:inline-block;"
-           onmouseover="this.style.color='#1877F2';this.style.transform='scale(1.2)';"
-           onmouseout="this.style.color='#ffffff';this.style.transform='scale(1)';">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-           </svg>
-        </a>
-    </div>
-</div>
+
+                    <h3>
+                        تابعني
+                    </h3>
+
+
+                    <div class="social-icons">
+
+
+                        <a
+                            href="https://github.com/mazenalsharq22-lab"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub">
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://t.me/ENG_MAZENNN"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Telegram">
+
+                            <i class="fab fa-telegram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/967712433463"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://instagram.com/eng.m_azen"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    ©
+                    <span id="currentYear"></span>
+
+                    المهندس مازن عبد المعز.
+                    جميع الحقوق محفوظة.
+
+                </p>
+
+            </div>
+
         </div>
-        <div class="footer-bottom">
-            <p>&copy; المهندس مازن عبد المعز. جميع الحقوق محفوظة    . 2026-2027</p>
-        </div>
+
     </footer>
 
+
+
+    <!-- JavaScript -->
+
     <script src="script.js"></script>
+
+
+    <script>
+
+        /* السنة الحالية */
+
+        const yearElement =
+            document.getElementById("currentYear");
+
+        if (yearElement) {
+
+            yearElement.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* Mobile Menu */
+
+        const menuToggle =
+            document.querySelector(".menu-toggle");
+
+        const navLinks =
+            document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+
+            menuToggle.addEventListener("click", function () {
+
+                navLinks.classList.toggle("active");
+
+            });
+
+        }
+
+    </script>
+
+
 </body>
+
 </html>
